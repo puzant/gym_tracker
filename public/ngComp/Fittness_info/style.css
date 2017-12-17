@@ -1,0 +1,70 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.Table {
+  display: flex;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 55%;
+    margin-top: -20px;
+}
+
+.table2 th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.table2 tr:nth-child(even){
+  background-color: #f2f2f2
+}
+
+.table3 {
+    border-collapse: collapse;
+    width: 40%;
+    margin-top: -20px;
+}
+
+.table3 th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.table3 tr:nth-child(even){
+  background-color: #f2f2f2
+}
+
+@media screen and (max-width: 600px) {
+.Table {
+      display: block;
+    }
+
+    .table3, .table2 {
+      width: 90%;
+    }
+
+   .table2  th{
+text-align: center;
+}
+
+.table3  th{
+text-align: center;
+}
+  }
+
+
+.nuttritonTable {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="ngComp/exercisesStyle.css">
+
+</head>
+
+<body ng-controller="myCtrl">
+
+    <div class="alert animated flipInX">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>Warning!</strong> Create your own account to save all your data 
+    </div>
+
+
+    <h2>Track Your Workouts</h2>
+    <table>
+        <tr>
+            <th>Excersises Name</th>
+            <th>NO. Reps</th>
+            <th>Weight</th>
+        </tr>
+        <tr ng-repeat="x in workouts">
+
+            <td> <a href="" ng-click="delete(x._id)"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+                <a href="" ng-click="update=!update"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></a> {{x.ExcersiseName}}
+                <div class="update-form" ng-show="update">
+                    Excersises Name: <input type="text" name="" value="" ng-model="u1"> NO. Reps: <input type="text" name="" value="" ng-model="u2"> Weight: <input type="text" name="" value="" ng-model="u3">
+                    <input id="update" type="submit" value="UPDATE" ng-click="Update(x._id,u1,u2,u3)">
+            </td>
+            <td>{{x.NoReps}} </td>
+            <td>{{x.weight}} Kg</td>
+
+            </div>
+        </tr>
+    </table>
+
+    <div class="wrapper">
+        <div class="container">
+            <h3>Add a new workout</h3>
+            <form action="">
+                Excersises Name: <input type="text" ng-model="d1"> Number of Reps: <input type="text" ng-model="d2"> wieght: <input type="text" ng-model="d3">
+                <input type="submit" value="Add" ng-click="add()">
+            </form>
+        </div>
+
+
+        <div class="container-2">
+            WorkOut Tips
+            <ul>
+                <li>LIFT PROGRESSIVELY HEAVIER WEIGHTS</li>
+                <li>EAT AT LEAST ONE-GRAM OF PROTEIN PER POUND OF BODYWEIGHT
+                </li>
+                <li>GET ADEQUATE SLEEP</li>
+                <li>DEVELOP A POSITIVE MENTAL ATTITUDE</li>
+                <li>AVOID OVERTRAINING</li>
+                <li>USE SUPPLEMENTS</li>
+                <li>INCLUDE AEROBICS</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
